@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		213BFDE02CFCE489004404E1 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 213BFDDF2CFCE489004404E1 /* SnapKit */; };
 		216506982CFCB053000EB263 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 216506972CFCB053000EB263 /* .gitignore */; };
 		21D8A9512CFCC15E00115877 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 21D8A9502CFCC15E00115877 /* Alamofire */; };
 		21D8A9542CFCC22800115877 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 21D8A9532CFCC22800115877 /* Swinject */; };
@@ -25,7 +26,7 @@
 		216505F62CFCAF49000EB263 /* Exceptions for "PodcastApp" folder in "PodcastApp" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				Info.plist,
+				Application/Info.plist,
 			);
 			target = 216505E32CFCAF48000EB263 /* PodcastApp */;
 		};
@@ -50,6 +51,7 @@
 				21D8A9682CFCCC8400115877 /* Toast in Frameworks */,
 				21D8A9722CFCD12A00115877 /* BottomSheet in Frameworks */,
 				21D8A9572CFCC2A600115877 /* Kingfisher in Frameworks */,
+				213BFDE02CFCE489004404E1 /* SnapKit in Frameworks */,
 				21D8A9512CFCC15E00115877 /* Alamofire in Frameworks */,
 				21D8A95F2CFCCB2A00115877 /* Realm in Frameworks */,
 				21D8A9542CFCC22800115877 /* Swinject in Frameworks */,
@@ -64,7 +66,6 @@
 			children = (
 				216506972CFCB053000EB263 /* .gitignore */,
 				216505E62CFCAF48000EB263 /* PodcastApp */,
-				21D8A9622CFCCBB300115877 /* Frameworks */,
 				216505E52CFCAF48000EB263 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -75,13 +76,6 @@
 				216505E42CFCAF48000EB263 /* PodcastApp.app */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		21D8A9622CFCCBB300115877 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -112,6 +106,7 @@
 				21D8A95E2CFCCB2A00115877 /* Realm */,
 				21D8A9672CFCCC8400115877 /* Toast */,
 				21D8A9712CFCD12A00115877 /* BottomSheet */,
+				213BFDDF2CFCE489004404E1 /* SnapKit */,
 			);
 			productName = PodcastApp;
 			productReference = 216505E42CFCAF48000EB263 /* PodcastApp.app */;
@@ -149,6 +144,7 @@
 				21D8A9662CFCCC8400115877 /* XCRemoteSwiftPackageReference "Toast-Swift" */,
 				21D8A9702CFCD12A00115877 /* XCRemoteSwiftPackageReference "BottomSheet" */,
 				21D8A9732CFCD2FF00115877 /* XCRemoteSwiftPackageReference "SwiftLint" */,
+				213BFDDE2CFCE489004404E1 /* XCRemoteSwiftPackageReference "SnapKit" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 216505E52CFCAF48000EB263 /* Products */;
@@ -232,7 +228,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 743VDKQNVW;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = PodcastApp/Info.plist;
+				INFOPLIST_FILE = PodcastApp/Application/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -260,7 +256,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 743VDKQNVW;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = PodcastApp/Info.plist;
+				INFOPLIST_FILE = PodcastApp/Application/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -422,6 +418,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		213BFDDE2CFCE489004404E1 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
 		21D8A94F2CFCC15E00115877 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
@@ -481,6 +485,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		213BFDDF2CFCE489004404E1 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 213BFDDE2CFCE489004404E1 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
 		21D8A9502CFCC15E00115877 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 21D8A94F2CFCC15E00115877 /* XCRemoteSwiftPackageReference "Alamofire" */;

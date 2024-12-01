@@ -8,13 +8,12 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController, NavigationView {
     
     // MARK: - Lifecycle Methods
-        override func viewDidLoad() {
+    override func viewDidLoad() {
         super.viewDidLoad()
-        
-        print("aaaa")
+        self.view = HomeView(self)
     }
 
     // MARK: - Properties
@@ -23,5 +22,9 @@ class HomeViewController: UIViewController {
 }
 
 extension HomeViewController: PresenterToViewHomeProtocol{
+    func showMessage(message: String) {
+        
+    }
+    
     // TODO: Implement View Output Methods
 }
